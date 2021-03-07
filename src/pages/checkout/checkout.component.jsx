@@ -3,6 +3,7 @@ import './checkout.styles.scss'
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectCartItems, selectCartItemsTotal } from '../../redux/cart/cart.selectors'
+import { Link } from 'react-router-dom';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component'
 
 const CheckoutPage = ({ cartItems, total }) => (
@@ -24,10 +25,13 @@ const CheckoutPage = ({ cartItems, total }) => (
                 <span>Remove</span>
             </div>
         </div>
-        {
+        {cartItems.length ?
             cartItems.map(cartItem => (<CheckoutItem key={cartItem.id} cartItem={cartItem} />))
+            : <h3 className="muted-text">Your cart is empty.{' '}
+                <Link to='/shop'>Shop here</Link>
+            </h3>
         }
-        <div>Total:{total}</div>
+        <div className="total">Total: ${total}</div>
     </div>
 )
 
