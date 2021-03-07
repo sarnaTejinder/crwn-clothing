@@ -15,7 +15,13 @@
     height: 240px;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow-y: scroll;
+  }
+  
+  .muted-text{
+    color: grey;
+    text-align: center;
+    
   }
 
   button {
