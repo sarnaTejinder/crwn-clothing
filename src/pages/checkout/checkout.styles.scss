@@ -5,7 +5,14 @@
   flex-direction: column;
   align-items: center;
   margin: 50px auto 0;
-  .muted-text{
+
+  .test-warning {
+    color: red;
+    margin: 20px auto;
+    font-size: x-large;
+    text-align: center;
+  }
+  .muted-text {
     margin: 30px auto 0px;
     color: grey;
     text-align: center;
@@ -17,8 +24,6 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid darkgrey;
-
-    
 
     .header-block {
       text-transform: capitalize;
